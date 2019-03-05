@@ -40,3 +40,70 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let codesnippet = document.getElementById("cta-img");
+codesnippet.setAttribute('src', siteContent["cta"]["img-src"])
+
+let midsnippet = document.getElementById("middle-img");
+midsnippet.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+// Nav
+const anchors = document.querySelectorAll('a');
+anchors[0].textContent = siteContent.nav['nav-item-1'];
+anchors[1].textContent = siteContent.nav['nav-item-2'];
+anchors[2].textContent = siteContent.nav['nav-item-3'];
+anchors[3].textContent = siteContent.nav['nav-item-4'];
+anchors[4].textContent = siteContent.nav['nav-item-5'];
+anchors[5].textContent = siteContent.nav['nav-item-6'];
+
+// Added Nav Content
+const nav = document.querySelector('nav');
+let adding = document.createElement('a');
+let addtext = document.createTextNode('Partnership')
+nav.appendChild(adding);
+adding.appendChild(addtext);
+
+let adding2 = document.createElement('a');
+let addtext2 = document.createTextNode('Blog')
+nav.appendChild(adding2);
+adding2.appendChild(addtext2);
+
+adding.style.color = "green";
+adding2.style.color = "green";
+
+// CTA
+let slogan = document.querySelector('h1');
+slogan.textContent = siteContent.cta['h1'];
+
+let button = document.querySelector('button');
+button.textContent = siteContent.cta['button'];
+
+// Content
+let headers = document.querySelectorAll('h4');
+headers[0].textContent = siteContent["main-content"]['features-h4'];
+headers[1].textContent = siteContent["main-content"]['about-h4'];
+headers[2].textContent = siteContent["main-content"]['services-h4'];
+headers[3].textContent = siteContent["main-content"]['product-h4'];
+headers[4].textContent = siteContent["main-content"]['vision-h4'];
+headers[5].textContent = siteContent["contact"]['contact-h4'];
+
+let content = document.querySelectorAll('p');
+content[0].textContent = siteContent["main-content"]['product-content'];
+content[1].textContent = siteContent["main-content"]['about-content'];
+content[2].textContent = siteContent["main-content"]['services-content'];
+content[3].textContent = siteContent["main-content"]['product-content'];
+content[4].textContent = siteContent["main-content"]['vision-content'];
+content[5].textContent = siteContent["contact"]['address'];
+content[6].textContent = siteContent["contact"]['phone'];
+content[7].textContent = siteContent["contact"]['email'];
+content[8].textContent = siteContent.footer['copyright'];
+
+// Stretch
+anchors.forEach(i => i.style.color = "blue");
+button.style.color = "blue";
+headers.forEach(function(i) {
+  i.style.textDecoration = "underline";
+});
+content.forEach(function(i) {
+  i.style.color= "blue";
+});
